@@ -1,9 +1,11 @@
 package com.foundation.dto;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+
 import org.springframework.stereotype.Component;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
+
 
 @Component
 public class CustomerRequestDTO {

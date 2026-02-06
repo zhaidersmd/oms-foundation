@@ -1,8 +1,10 @@
 package com.foundation.repository;
 
+import javax.persistence.EntityManager;
+
 import org.springframework.stereotype.Repository;
 import com.foundation.entity.Customer;
-import jakarta.persistence.EntityManager;
+
 
 @Repository
 public class CustomerDAO {

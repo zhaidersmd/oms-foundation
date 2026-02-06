@@ -3,13 +3,15 @@ package com.foundation.dao;
 import java.util.List;
 import java.util.Optional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
+
 import org.springframework.stereotype.Repository;
 
 import com.foundation.entity.Customer;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import jakarta.transaction.Transactional;
+
 
 @Repository
 @Transactional
