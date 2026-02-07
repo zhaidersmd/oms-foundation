@@ -34,7 +34,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 sh "docker build -t oms-foundation:1.0 ."
-                sh "docker tag oms-foundation:latest 137146002396.dkr.ecr.ap-south-1.amazonaws.com/oms-foundation:latest"
+                sh "docker tag oms-foundation:1.0 137146002396.ecr/oms-foundation:latest"
             }
 
 
