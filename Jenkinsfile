@@ -31,10 +31,12 @@ pipeline {
             }
         }
 
-        stage('Build Image') {
+        stage('Build Image and push to ECR') {
             steps {
-                sh "docker build -t oms-foundation:1.0 ."
-                sh "docker tag oms-foundation:1.0 137146002396.ecr/oms-foundation:latest"
+				sh "aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 137146002396.dkr.ecr.ap-south-1.amazonaws.com"
+                sh "docker build -t my-docker-repo ."
+                sh "docker tag my-docker-repo:latest 137146002396.dkr.ecr.ap-south-1.amazonaws.com/my-docker-repo:latest"
+                sh "docker push 137146002396.dkr.ecr.ap-south-1.amazonaws.com/my-docker-repo:latest"
             }
 
 
